@@ -43,6 +43,10 @@
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::place.place"
+    },
+    "competed": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
