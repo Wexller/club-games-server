@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "places",
+  "collectionName": "locations",
   "info": {
-    "singularName": "place",
-    "pluralName": "places",
-    "displayName": "Место проведения",
+    "singularName": "location",
+    "pluralName": "locations",
+    "displayName": "Location",
     "description": ""
   },
   "options": {
@@ -18,9 +18,8 @@
     "description": {
       "type": "richtext"
     },
-    "place": {
-      "type": "string",
-      "required": true
+    "address": {
+      "type": "string"
     }
   }
 }

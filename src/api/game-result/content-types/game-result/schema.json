@@ -1,0 +1,38 @@
+{
+  "kind": "collectionType",
+  "collectionName": "game_results",
+  "info": {
+    "singularName": "game-result",
+    "pluralName": "game-results",
+    "displayName": "Game result",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "game_enrollment": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::enrollment.enrollment",
+      "inversedBy": "game_results"
+    },
+    "user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "game_results"
+    },
+    "place": {
+      "type": "integer"
+    },
+    "passiveIncome": {
+      "type": "integer"
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

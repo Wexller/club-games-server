@@ -1,5 +1,5 @@
 {
-  "/places": {
+  "/game-results": {
     "get": {
       "responses": {
         "200": {
@@ -7,7 +7,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PlaceListResponse"
+                "$ref": "#/components/schemas/GameResultListResponse"
               }
             }
           }
@@ -64,7 +64,7 @@
         }
       },
       "tags": [
-        "Place"
+        "Game-result"
       ],
       "parameters": [
         {
@@ -169,7 +169,7 @@
           }
         }
       ],
-      "operationId": "get/places"
+      "operationId": "get/game-results"
     },
     "post": {
       "responses": {
@@ -178,7 +178,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PlaceResponse"
+                "$ref": "#/components/schemas/GameResultResponse"
               }
             }
           }
@@ -235,23 +235,23 @@
         }
       },
       "tags": [
-        "Place"
+        "Game-result"
       ],
       "parameters": [],
-      "operationId": "post/places",
+      "operationId": "post/game-results",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/PlaceRequest"
+              "$ref": "#/components/schemas/GameResultRequest"
             }
           }
         }
       }
     }
   },
-  "/places/{id}": {
+  "/game-results/{id}": {
     "get": {
       "responses": {
         "200": {
@@ -259,7 +259,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PlaceResponse"
+                "$ref": "#/components/schemas/GameResultResponse"
               }
             }
           }
@@ -316,7 +316,7 @@
         }
       },
       "tags": [
-        "Place"
+        "Game-result"
       ],
       "parameters": [
         {
@@ -330,7 +330,7 @@
           }
         }
       ],
-      "operationId": "get/places/{id}"
+      "operationId": "get/game-results/{id}"
     },
     "put": {
       "responses": {
@@ -339,7 +339,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/PlaceResponse"
+                "$ref": "#/components/schemas/GameResultResponse"
               }
             }
           }
@@ -396,7 +396,7 @@
         }
       },
       "tags": [
-        "Place"
+        "Game-result"
       ],
       "parameters": [
         {
@@ -410,13 +410,13 @@
           }
         }
       ],
-      "operationId": "put/places/{id}",
+      "operationId": "put/game-results/{id}",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/PlaceRequest"
+              "$ref": "#/components/schemas/GameResultRequest"
             }
           }
         }
@@ -487,7 +487,7 @@
         }
       },
       "tags": [
-        "Place"
+        "Game-result"
       ],
       "parameters": [
         {
@@ -501,7 +501,7 @@
           }
         }
       ],
-      "operationId": "delete/places/{id}"
+      "operationId": "delete/game-results/{id}"
     }
   }
 }

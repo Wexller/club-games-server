@@ -4,7 +4,7 @@
   "info": {
     "singularName": "enrollment",
     "pluralName": "enrollments",
-    "displayName": "Расписание",
+    "displayName": "Game enrollment",
     "description": ""
   },
   "options": {
@@ -13,7 +13,8 @@
   "pluginOptions": {},
   "attributes": {
     "date": {
-      "type": "datetime"
+      "type": "datetime",
+      "required": true
     },
     "price": {
       "type": "integer",
@@ -39,14 +40,20 @@
       "relation": "oneToMany",
       "target": "plugin::users-permissions.user"
     },
-    "place": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::place.place"
-    },
     "competed": {
       "type": "boolean",
       "default": false
+    },
+    "location": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::location.location"
+    },
+    "game_results": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::game-result.game-result",
+      "mappedBy": "game_enrollment"
     }
   }
 }
